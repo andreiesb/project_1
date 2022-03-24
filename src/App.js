@@ -1,10 +1,16 @@
+import React from "react";
+import { Container } from "./App.styles";
+import Home from "./components/home/home.component";
 
-function App() {
+import GlobalStyle from "./GlobalStyles";
+
+const App = () => {
   return (
-    <div>
-      
-    </div>
+    <Container>
+      <GlobalStyle />
+      <Home />
+    </Container>
   );
-}
+};
 
 export default App;
