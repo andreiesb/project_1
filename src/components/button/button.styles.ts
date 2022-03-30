@@ -1,20 +1,22 @@
 import styled from "styled-components";
 
-const Button = styled.div`
+import { ButtonProps} from '../../@types/button'
+
+const Button = styled.div<ButtonProps>`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 10rem;
+  width: 100%;
   height: 2rem;
   padding: 1rem;
-  border: 1px solid ${({ border }) => (border ? border : "#fff")};
+  border: 1px solid ${({ border }) => (border ?? "#fff")};
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.7);
   border-radius: .5rem;
-  background: ${({ background }) => (background ? background : "transparent")}
-  margin: 2rem;
+  background-color: ${({ background }) => (background ?? "transparent")};
+  margin: 0.5rem 1rem;
 
   font-size: clamp(.9rem, 1vw, 1.3rem);
-  color: #fff;
+  color: ${({ color }) => (color ?? "#484848")};
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.57);
   text-transform: capitalize;
 
@@ -28,9 +30,13 @@ const Button = styled.div`
 export const ButtonContainer = styled.div`
   margin-top: 2rem;
   display: flex;
-  width: 350px;
+  max-width: 450px;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+
+  @media screen and (max-width: 950px) {
+    flex-direction: column;
+  }
 `;
 
 export default Button;

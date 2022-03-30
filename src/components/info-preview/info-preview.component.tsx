@@ -9,7 +9,7 @@ const InfoPreview = ({ item: { title, paragraph } }) => {
       <Paragraph>{paragraph}</Paragraph>
       <ButtonContainer>
         <Button background="#fff"> Saiba Mais </Button>
-        <Button border="#fff"> Comprar Projeto </Button>
+        <Button border="#fff" color="#fff"> Comprar Projeto </Button>
       </ButtonContainer>
     </Container>
   );

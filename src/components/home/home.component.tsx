@@ -4,14 +4,15 @@ import CardPreview from "../card-preview/card-preview.component";
 import InfoPreview from "../info-preview/info-preview.component";
 
 import { Container } from "./home.styles";
+import { Context } from "../../context/context";
 
-import { DATA } from "../../data/data";
+const Home:React.FC = () => {
+  const { card } = React.useContext(Context)
 
-const Home = () => {
   return (
-    <Container image={DATA[1].image}>
+    <Container image={card.image}>
       <InfoPreview
-        item={{ title: DATA[1].title, paragraph: DATA[1].paragraph }}
+        item={{ title: card.title, paragraph: card.paragraph }}
       />
       <CardPreview />
     </Container>

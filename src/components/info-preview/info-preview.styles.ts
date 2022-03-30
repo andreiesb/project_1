@@ -6,7 +6,8 @@ export const Container = styled.div`
   max-width: 30rem;
   height: 20rem;
   z-index: 4;
-  margin-left: 4rem;
+  margin-left: 2rem;
+  transform: translateY(-3.5rem);
 `;
 
 export const Title = styled.p`

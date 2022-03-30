@@ -4,8 +4,8 @@ export const Container = styled.div`
   display: flex;
   align-items: flex-end;
   padding: 1rem;
-  height: 17rem;
-  width: 10rem;
+  height: 12rem;
+  width: 9rem;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.7);
   background-image: url(${({ image }) => image});
   background-size: cover;
